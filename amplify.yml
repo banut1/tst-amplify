@@ -4,6 +4,7 @@ applications:
       phases:
         build:
           commands:
+            - cd tst-amplify
             - pwd
             - npm install
             - npm run-script build:prod
@@ -29,6 +30,6 @@ applications:
             - echo "npm version" && npm -v
             - echo "node version" && node -v
             - pwd
-            - cd ../tst-amplify
+            - cd ..
             - amplifyPush --simple
             - pwd
