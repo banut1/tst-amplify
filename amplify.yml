@@ -30,6 +30,6 @@ applications:
             - echo "npm version" && npm -v
             - echo "node version" && node -v
             - pwd
-            - cd ..
+            - cd ../..
             - amplifyPush --simple
             - pwd
