@@ -7,7 +7,7 @@ applications:
             - cd tst-amplify
             - pwd
             - npm install
-            - npm run-script build:prod
+            - npm run-script build
       artifacts:
         baseDirectory: '../dist'
         files:
