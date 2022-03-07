@@ -29,6 +29,6 @@ applications:
             - echo "npm version" && npm -v
             - echo "node version" && node -v
             - pwd
-            - cd ..
+            - cd ../tst-amplify
             - amplifyPush --simple
             - pwd

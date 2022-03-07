@@ -16,6 +16,7 @@ export const getUserPoolId = async (env) => {
 };
 
 const hookHandler = async (data) => {
+    console.log('hello from hook')
     await getUserPoolId('dev');
 };
 
