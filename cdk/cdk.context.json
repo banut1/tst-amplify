@@ -1,0 +1,50 @@
+{
+  "availability-zones:account=426352665181:region=eu-central-1": [
+    "eu-central-1a",
+    "eu-central-1b",
+    "eu-central-1c"
+  ],
+  "vpc-provider:account=426352665181:filter.tag:Name=passbrains:region=eu-central-1:returnAsymmetricSubnets=true": {
+    "vpcId": "vpc-0932b7c701d82db15",
+    "vpcCidrBlock": "100.0.0.0/16",
+    "availabilityZones": [],
+    "subnetGroups": [
+      {
+        "name": "passbrains-private-subnet",
+        "type": "Isolated",
+        "subnets": [
+          {
+            "subnetId": "subnet-03010c84c734e9893",
+            "cidr": "100.0.0.0/18",
+            "availabilityZone": "eu-central-1a",
+            "routeTableId": "rtb-02a8bf117ecd83931"
+          },
+          {
+            "subnetId": "subnet-07da3f86415851ed0",
+            "cidr": "100.0.64.0/18",
+            "availabilityZone": "eu-central-1b",
+            "routeTableId": "rtb-01cc3277aad71c3a0"
+          }
+        ]
+      },
+      {
+        "name": "passbrains-public-subnet",
+        "type": "Public",
+        "subnets": [
+          {
+            "subnetId": "subnet-0aed2fcb784e6175a",
+            "cidr": "100.0.128.0/18",
+            "availabilityZone": "eu-central-1a",
+            "routeTableId": "rtb-00b52548d8b9d352f"
+          },
+          {
+            "subnetId": "subnet-08e76aa20fd0c1ed0",
+            "cidr": "100.0.192.0/18",
+            "availabilityZone": "eu-central-1b",
+            "routeTableId": "rtb-07b1f622da5e3caec"
+          }
+        ]
+      }
+    ]
+  }
+}

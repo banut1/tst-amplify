@@ -21,15 +21,17 @@ applications:
           commands:
             - pwd
             - cd ../amplify/hooks
-            - npm install
-            - npm list --depth=0
-            - pwd
-            - ls -la
+            - yarn install
+            - cd ../cdk
+            - yarn install
+            - export AWS_ACCOUNT=$CUSTOMER_ACCOUNTID
+            - export ENV_NAME=$USER_BRANCH
+            - npx cdk deploy tstteo-$ENV_NAME
         build:
           commands:
             - echo "npm version" && npm -v
             - echo "node version" && node -v
             - pwd
-            - cd ../..
+            - cd ..
             - amplifyPush --simple
             - pwd
