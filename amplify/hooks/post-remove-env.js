@@ -1,12 +1,14 @@
 import { execSync } from 'child_process';
+import {getEnvName, getParameters} from "./utils";
 
-const hookHandler = async () => {
-  console.log(`Removing cdk main stack for env ${process.env.ENV_NAME}`);
-  execSync(`yarn cdk:destroy:env -f`, { stdio: 'inherit' });
+const hookHandler = async (data) => {
+  const env = getEnvName(data);
+  console.log(`Removing cdk main stack for env ${env}`);
+  execSync(`cdk destroy tstteo-${env}`, { stdio: 'inherit' });
   console.log('Removed!');
 };
 
-hookHandler().catch((err) => {
+getParameters().then((data) => hookHandler(data)).catch((err) => {
   console.error(err);
   process.exitCode = 1;
 });
