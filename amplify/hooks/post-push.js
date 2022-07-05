@@ -8,7 +8,7 @@ const hookHandler = async (data) => {
   console.log('Removed!');
 };
 
-getParameters().then((data) => hookHandler(data)).catch((err) => {
+getParameters().then((event) => hookHandler(event.data)).catch((err) => {
   console.error(err);
   process.exitCode = 1;
 });
