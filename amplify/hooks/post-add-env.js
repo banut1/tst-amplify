@@ -1,4 +1,4 @@
-import { getParameters, prompt } from './utils.js';
+import { getParameters } from './utils.js';
 import { writeFileSync } from 'fs';
 import { readFile } from 'node:fs/promises';
 
