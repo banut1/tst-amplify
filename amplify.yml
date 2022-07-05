@@ -22,7 +22,7 @@ applications:
             - pwd
             - cd ../amplify/hooks
             - yarn install
-            - cd ../cdk
+            - cd ../../cdk
             - yarn install
             - export AWS_ACCOUNT=$CUSTOMER_ACCOUNTID
             - export ENV_NAME=$USER_BRANCH
