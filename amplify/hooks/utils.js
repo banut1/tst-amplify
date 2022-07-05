@@ -10,19 +10,6 @@ export const cognitoClient = new CognitoIdentityProviderClient({ region: REGION 
 export const lambdaClient = new LambdaClient({ region: REGION });
 export const appSyncClient = new AppSyncClient({ region: REGION });
 export const getParameters = async () => JSON.parse(fs.readFileSync(0, { encoding: 'utf8' }));
-export const prompt = (message) => {
-  const int = createInterface({
-    input: process.stdin,
-    output: process.stdout,
-    terminal: false,
-  });
-  return new Promise((resolve) =>
-    int.question(message + '\n', (answer) => {
-      int.close();
-      resolve(answer);
-    })
-  );
-};
 
 export const getUserPoolId = async (env) => {
   let nextToken = null;
