@@ -1,5 +1,5 @@
 import { execSync } from 'child_process';
-import {getEnvName, getParameters} from "./utils";
+import {getEnvName, getParameters} from "./utils.js";
 
 const hookHandler = async (data) => {
   const env = getEnvName(data);
